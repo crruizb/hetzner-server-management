@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - ../../apps/base
 patchesStrategicMerge:
-  - smart-news
+  - smart-news/smart-news.yaml
+  - smart-news/smart-news-sealed.yaml
