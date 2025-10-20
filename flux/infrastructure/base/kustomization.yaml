@@ -5,3 +5,4 @@ resources:
   - namespaces.yaml
   - sources
   - sealed-secrets
+  - cert-manager

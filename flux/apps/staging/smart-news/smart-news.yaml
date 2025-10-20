@@ -9,3 +9,17 @@ spec:
       repository: cristianrb/smartnews
       tag: latest
     envSecretName: smart-news-secrets
+    ingress:
+      enabled: true
+      className: traefik
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-staging
+      hosts:
+        - host: api.cristianruiz.dev
+          paths:
+            - path: /sn/api
+              pathType: Prefix
+      tls:
+        - secretName: api-cristianruiz-dev-tls
+          hosts:
+            - api.cristianruiz.dev
