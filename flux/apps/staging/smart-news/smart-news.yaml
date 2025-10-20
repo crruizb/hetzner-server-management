@@ -8,3 +8,4 @@ spec:
     image:
       repository: cristianrb/smartnews
       tag: latest
+    envSecretName: smart-news-secrets
