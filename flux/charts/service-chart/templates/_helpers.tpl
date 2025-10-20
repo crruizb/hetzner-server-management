@@ -31,13 +31,6 @@ Create chart name and version as used by the chart label.
 {{- end }}
 
 {{/*
-    Name of the (sealed)secret bound as the containers config file
-*/}}
-{{- define "secret" -}}
-{{- printf "%s-config" .Release.Name -}}
-{{- end -}}
-
-{{/*
 Common labels
 */}}
 {{- define "service-chart.labels" -}}
