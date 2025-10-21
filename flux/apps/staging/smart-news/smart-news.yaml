@@ -9,6 +9,8 @@ spec:
       repository: cristianrb/smartnews
       tag: latest
     envSecretName: smart-news-secrets
+    service:
+      port: 8080
     ingress:
       enabled: true
       className: traefik
