@@ -28,3 +28,7 @@ spec:
   dependsOn:
     - name: cert-manager-crds
       namespace: flux-system
+  healthChecks:
+    - kind: Deployment
+      name: cert-manager-webhook
+      namespace: flux-system
