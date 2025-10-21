@@ -20,7 +20,7 @@ spec:
       hosts:
         - host: api.cristianruiz.dev
           paths:
-            - path: /sn/api
+            - path: /sn
               pathType: Prefix
       tls:
         - secretName: api-cristianruiz-dev-tls
