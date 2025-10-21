@@ -6,10 +6,6 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: cert-manager
-  dependsOn:
-    - name: cert-manager
-      kind: HelmRepository
-      namespace: flux-system
   interval: 5m
   chart:
     spec:
