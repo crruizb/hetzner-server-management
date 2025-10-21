@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - ../../apps/base
   - smart-news/smart-news-sealed.yaml
+  - smart-news/strip-sn-middleware.yaml
 patchesStrategicMerge:
   - smart-news/smart-news.yaml

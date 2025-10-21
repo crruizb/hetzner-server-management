@@ -16,6 +16,7 @@ spec:
       className: traefik
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-staging
+        traefik.ingress.kubernetes.io/router.middlewares: apps-strip-sn@kubernetescrd
       hosts:
         - host: api.cristianruiz.dev
           paths:
