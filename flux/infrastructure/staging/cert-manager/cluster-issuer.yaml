@@ -4,6 +4,10 @@ metadata:
   name: letsencrypt-staging
   namespace: cert-manager
 spec:
+  dependsOn:
+    - name: cert-manager
+      kind: HelmRelease
+      namespace: flux-system
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: me@cristianruiz.dev
