@@ -8,6 +8,7 @@ spec:
     image:
       repository: cristianrb/smartnews
       tag: latest
+      pullPolicy: Always
     envSecretName: smart-news-secrets
     service:
       port: 8080
