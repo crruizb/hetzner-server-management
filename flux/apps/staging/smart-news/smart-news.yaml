@@ -11,7 +11,7 @@ spec:
       pullPolicy: Always
     envSecretName: smart-news-secrets
     service:
-      port: 8080
+      port: 8081
     ingress:
       enabled: true
       className: traefik
