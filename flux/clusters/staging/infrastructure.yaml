@@ -14,3 +14,8 @@ spec:
   path: ./flux/infrastructure/staging
   prune: true
   wait: true
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: sealed-secrets
+      namespace: flux-system
