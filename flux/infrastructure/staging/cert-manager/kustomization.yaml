@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - cluster-issuer.yaml
   - cloudflare-sealed-secret.yaml
+  - cloudflare-sealed-secret-apps.yaml
