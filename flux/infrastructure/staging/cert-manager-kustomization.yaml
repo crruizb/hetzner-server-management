@@ -16,7 +16,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: cert-manager-cluster-issuer
-  namespace: flux-system
+  namespace: apps
 spec:
   interval: 10m
   path: "./flux/infrastructure/staging/cert-manager"
@@ -31,4 +31,4 @@ spec:
   healthChecks:
     - kind: Deployment
       name: cert-manager-webhook
-      namespace: flux-system
+      namespace: apps
