@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
   - ../../apps/base
   - steam-companion/steam-companion-sealed.yaml
-  - steam-companion/strip-sc-middleware.yaml
 patchesStrategicMerge:
   - steam-companion/steam-companion.yaml
