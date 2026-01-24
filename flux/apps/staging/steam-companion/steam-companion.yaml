@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: steam-companion-service
+  namespace: apps
+spec:
+  values:
+    image:
+      repository: cristianrb/steamcompanion
+      tag: latest
+      pullPolicy: Always
+    envSecretName: steam-companion-secrets
+    service:
+      port: 8080
+    ingress:
+      enabled: true
+      className: traefik
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-staging
+      hosts:
+        - host: api.steamcompanion.dpdns.org
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - secretName: steamcompanion-dpdns-org-tls
+          hosts:
+            - api.steamcompanion.dpdns.org
