@@ -4,3 +4,4 @@ resources:
   - cluster-issuer.yaml
   - cloudflare-sealed-secret.yaml
   - cloudflare-sealed-secret-apps.yaml
+  - cloudflare-sealed-secret-cert-manager.yaml
