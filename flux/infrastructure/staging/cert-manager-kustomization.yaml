@@ -31,4 +31,4 @@ spec:
   healthChecks:
     - kind: Deployment
       name: cert-manager-webhook
-      namespace: apps
+      namespace: flux-system
