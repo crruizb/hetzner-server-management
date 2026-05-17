@@ -25,9 +25,6 @@ spec:
         {{ end }}
     push:
       branch: main
-  policy:
-    alphabetical:
-      order: asc
   update:
     path: ./flux
     strategy: Setters
