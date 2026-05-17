@@ -7,7 +7,7 @@ spec:
   values:
     image:
       repository: cristianrb/smartnews
-      tag: latest # {"$imagepolicy": "flux-system:smart-news-service"}
+      tag: cristianrb/smartnews:20250401061734 # {"$imagepolicy": "flux-system:smart-news-service"}
       pullPolicy: Always
     envSecretName: smart-news-secrets
     service:
