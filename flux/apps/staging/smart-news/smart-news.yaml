@@ -6,8 +6,7 @@ metadata:
 spec:
   values:
     image:
-      repository: cristianrb/smartnews
-      tag: cristianrb/smartnews:20250401061734 # {"$imagepolicy": "flux-system:smart-news-service"}
+      full: cristianrb/smartnews:latest # {"$imagepolicy": "flux-system:smart-news-service"}
       pullPolicy: Always
     envSecretName: smart-news-secrets
     service:
