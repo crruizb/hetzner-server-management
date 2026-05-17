@@ -2,7 +2,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
   name: smart-news-service
-  namespace: apps
+  namespace: flux-system
 spec:
   image: cristianrb/smartnews
   interval: 1m0s
@@ -13,10 +13,12 @@ apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
   name: smart-news-service
-  namespace: apps
+  namespace: flux-system
 spec:
   imageRepositoryRef:
     name: smart-news-service
+  filterTags:
+    pattern: '^[0-9]{14}$'
   policy:
-    numerical:
+    alphabetical:
       order: desc
