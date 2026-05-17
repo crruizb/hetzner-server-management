@@ -20,5 +20,5 @@ spec:
   filterTags:
     pattern: '^[0-9]{14}$'
   policy:
-    alphabetical:
+    numerical:
       order: desc
