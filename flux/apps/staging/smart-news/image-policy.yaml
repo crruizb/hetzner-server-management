@@ -6,6 +6,8 @@ metadata:
 spec:
   image: cristianrb/smartnews
   interval: 1m0s
+  exclusionList:
+    - ^latest$
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
