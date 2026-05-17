@@ -7,7 +7,7 @@ spec:
   values:
     image:
       repository: cristianrb/smartnews
-      tag: latest
+      tag: latest # {"$imagepolicy": "apps:smart-news-service"}
       pullPolicy: Always
     envSecretName: smart-news-secrets
     service:

@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - smart-news-sealed.yaml
   - strip-sn-middleware.yaml
+  - image-policy.yaml
