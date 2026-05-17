@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ../../infrastructure/base
   - cert-manager-kustomization.yaml
+  - image-automation.yaml
