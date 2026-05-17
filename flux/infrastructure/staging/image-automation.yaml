@@ -16,13 +16,7 @@ spec:
       author:
         name: Flux Bot
         email: flux-bot@cristianruiz.dev
-      messageTemplate: |
-        Automated image update
-
-        Images:
-        {{ range .Changed.Images -}}
-        - {{.}}
-        {{ end }}
+      messageTemplate: "Automated image update"
     push:
       branch: main
   update:
