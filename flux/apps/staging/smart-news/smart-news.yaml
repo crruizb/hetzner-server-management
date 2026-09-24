@@ -6,7 +6,7 @@ metadata:
 spec:
   values:
     image:
-      full: cristianrb/smartnews:20260924161458 # {"$imagepolicy": "flux-system:smart-news-service"}
+      full: cristianrb/smartnews:20260924164012 # {"$imagepolicy": "flux-system:smart-news-service"}
       pullPolicy: Always
     envSecretName: smart-news-secrets
     service:
