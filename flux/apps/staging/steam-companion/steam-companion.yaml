@@ -9,6 +9,16 @@ spec:
       full: cristianrb/steamcompanion:20260929160229-0180f61 # {"$imagepolicy": "flux-system:steam-companion-service"}
       pullPolicy: Always
     envSecretName: steam-companion-secrets
+    # The JVM sizes its heap from the memory limit (-XX:MaxRAMPercentage=50 in the image's
+    # Dockerfile), so the heap gets 256Mi and the rest covers metaspace, threads, etc.
+    # Memory request = limit, so the pod always gets its full memory on this small node.
+    # No CPU limit: Spring Boot needs bursts of CPU while starting.
+    resources:
+      requests:
+        cpu: 100m
+        memory: 512Mi
+      limits:
+        memory: 512Mi
     service:
       port: 8080
     ingress:
