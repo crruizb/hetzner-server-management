@@ -6,7 +6,7 @@ metadata:
 spec:
   values:
     image:
-      full: cristianrb/steamcompanion:20260929161507-f95a646 # {"$imagepolicy": "flux-system:steam-companion-service"}
+      full: cristianrb/steamcompanion:20260929162859-f47a931 # {"$imagepolicy": "flux-system:steam-companion-service"}
       pullPolicy: Always
     envSecretName: steam-companion-secrets
     # The JVM sizes its heap from the memory limit (-XX:MaxRAMPercentage=50 in the image's
