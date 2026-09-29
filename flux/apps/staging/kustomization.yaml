@@ -4,6 +4,7 @@ resources:
   - ../../apps/base
   - smart-news
   - steam-companion/steam-companion-sealed.yaml
+  - steam-companion/image-policy.yaml
   - prexario/prexario-sealed.yaml
 patchesStrategicMerge:
   - smart-news/smart-news.yaml

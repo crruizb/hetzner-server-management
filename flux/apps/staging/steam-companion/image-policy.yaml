@@ -1,0 +1,26 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: steam-companion-service
+  namespace: flux-system
+spec:
+  image: cristianrb/steamcompanion
+  interval: 1m0s
+  exclusionList:
+    - ^latest$
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: steam-companion-service
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: steam-companion-service
+  # Tags are <build date>-<short commit SHA>; order by the date part
+  filterTags:
+    pattern: '^(?P<ts>[0-9]{14})-[0-9a-f]{7}$'
+    extract: '$ts'
+  policy:
+    numerical:
+      order: asc
