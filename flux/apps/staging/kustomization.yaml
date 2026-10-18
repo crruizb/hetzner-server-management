@@ -7,6 +7,7 @@ resources:
   - steam-companion/image-policy.yaml
   - prexario/prexario-sealed.yaml
   - opobressol/image-policy.yaml
+  - opobressol/opobressol-sealed.yaml
 patchesStrategicMerge:
   - smart-news/smart-news.yaml
   - steam-companion/steam-companion.yaml
