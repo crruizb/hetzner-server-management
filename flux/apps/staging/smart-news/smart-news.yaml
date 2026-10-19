@@ -9,6 +9,15 @@ spec:
       full: cristianrb/smartnews:20260927155434 # {"$imagepolicy": "flux-system:smart-news-service"}
       pullPolicy: Always
     envSecretName: smart-news-secrets
+    # JVM runs with -Xmx128m but RSS sits around 380Mi (metaspace, threads, etc.).
+    # Memory request = limit so the pod always gets it on this small node. No CPU limit
+    # so startup can burst.
+    resources:
+      requests:
+        cpu: 50m
+        memory: 512Mi
+      limits:
+        memory: 512Mi
     service:
       port: 8080
     ingress:

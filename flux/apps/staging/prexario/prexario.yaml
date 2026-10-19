@@ -10,6 +10,16 @@ spec:
       tag: latest
       pullPolicy: Always
     envSecretName: prexario-secrets
+    # JVM with no explicit heap cap: it sizes the heap from this limit, so without one it
+    # could grow towards a quarter of the whole node. Usage is around 350Mi.
+    # Memory request = limit so the pod always gets it on this small node. No CPU limit
+    # so startup can burst.
+    resources:
+      requests:
+        cpu: 50m
+        memory: 512Mi
+      limits:
+        memory: 512Mi
     service:
       port: 8080
     ingress:
