@@ -6,7 +6,7 @@ metadata:
 spec:
   values:
     image:
-      full: cristianrb/opobressol-api:20261108151204-8619039 # {"$imagepolicy": "flux-system:opobressol-service"}
+      full: cristianrb/opobressol-api:20261108160002-c5ef7ba # {"$imagepolicy": "flux-system:opobressol-service"}
       pullPolicy: Always
     envSecretName: opobressol-secrets
     # Small Go binary. Memory request = limit so the pod always gets it on this small node.
