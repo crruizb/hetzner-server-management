@@ -30,7 +30,13 @@ spec:
           paths:
             - path: /
               pathType: Prefix
+        # Redirected to opobressol.cat by nginx
+        - host: www.opobressol.cat
+          paths:
+            - path: /
+              pathType: Prefix
       tls:
         - secretName: opobressol-cat-tls
           hosts:
             - opobressol.cat
+            - www.opobressol.cat
