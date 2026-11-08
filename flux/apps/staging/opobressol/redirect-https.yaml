@@ -1,0 +1,11 @@
+# opobressol is not behind the Cloudflare proxy, so Traefik has to send
+# http:// to https:// itself. Requests that are already HTTPS pass through.
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect-https
+  namespace: apps
+spec:
+  redirectScheme:
+    scheme: https
+    permanent: true

@@ -23,6 +23,7 @@ spec:
       className: traefik
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-staging
+        traefik.ingress.kubernetes.io/router.middlewares: apps-redirect-https@kubernetescrd
       hosts:
         - host: api.opobressol.cat
           paths:
