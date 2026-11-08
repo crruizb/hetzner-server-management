@@ -24,3 +24,30 @@ spec:
   policy:
     numerical:
       order: asc
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: opobressol-web
+  namespace: flux-system
+spec:
+  image: cristianrb/opobressol-web
+  interval: 1m0s
+  exclusionList:
+    - ^latest$
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: opobressol-web
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: opobressol-web
+  # Tags are <build date>-<short commit SHA>; order by the date part
+  filterTags:
+    pattern: '^(?P<ts>[0-9]{14})-[0-9a-f]{7}$'
+    extract: '$ts'
+  policy:
+    numerical:
+      order: asc
