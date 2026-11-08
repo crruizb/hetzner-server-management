@@ -7,7 +7,7 @@ spec:
   values:
     image:
       # Flux image automation replaces this with the newest timestamp tag
-      full: cristianrb/opobressol-web:latest # {"$imagepolicy": "flux-system:opobressol-web"}
+      full: cristianrb/opobressol-web:20261108164802-0549e0a # {"$imagepolicy": "flux-system:opobressol-web"}
       pullPolicy: IfNotPresent
     serviceAccount:
       automount: false
